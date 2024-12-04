@@ -358,6 +358,7 @@ form .input-group {
 }
 .bill .header h3 {
   color: var(--marine-blue);
+  font-size: 1.25rem;
 }
 .bill .header a {
   text-decoration: underline;
@@ -371,4 +372,50 @@ form .input-group {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
+}
+.bill .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.bill .service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.service h3 {
+  color: var(--cool-gray);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.service span {
+  color: var(--marine-blue);
+  font-size: 1.25rem;
+}
+.total-serivce {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: var(--cool-gray);
+}
+.total-serivce span {
+  font-size: 1.5rem;
+  color: var(--purplish-blue);
+  font-weight: 600;
+}
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.thank-you h2 {
+  color: var(--marine-blue);
+}
+.thank-you p {
+  text-align: center;
+  line-height: 2;
 }
