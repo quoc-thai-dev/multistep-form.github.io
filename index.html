@@ -36,7 +36,7 @@
       <div class="multi-step-form">
         <aside class="sidebar">
           <ul class="control">
-            <li class="step active" data-step="1">1</li>
+            <li class="step" data-step="1">1</li>
             <li class="step" data-step="2">2</li>
             <li class="step" data-step="3">3</li>
             <li class="step" data-step="4">4</li>
@@ -44,7 +44,7 @@
         </aside>
         <div class="form-content">
           <form id="multiStepForm">
-            <div class="form-step active" data-step="1">
+            <div class="form-step" data-step="1">
               <h2>Personal info</h2>
               <p>Please provide your name, email address, and phone number.</p>
               <div class="input-group">
@@ -52,7 +52,7 @@
                   <label for="name">Name</label>
                   <span class="error-message">This field is required</span>
                 </div>
-                <input type="text" placeholder="e.g. Stephen King" id="name" />
+                <input type="text" required placeholder="e.g. Stephen King" id="name" />
               </div>
               <div class="input-group">
                 <div class="label-group">
@@ -81,7 +81,7 @@
               <h2>Select your plan</h2>
               <p>You have the option of monthly or yearly billing.</p>
               <div class="plans">
-                <div class="plan selected">
+                <div class="plan">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="40"
@@ -126,21 +126,6 @@
               <h2>Pick add-ons</h2>
               <p>Add-ons help enhance your gaming experience.</p>
               <div class="addons">
-                <div class="add selected">
-                  <div class="checkbox-container">
-                    <label>
-                    <input type="checkbox"class="rounded-checkbox" checked>
-                    <span class="checkmark">
-                      <svg class="checkbox-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="currentColor" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
-                    </span>
-                    </label>
-                  </div>
-                  <div class="description">
-                    <h3>Online Service</h3>
-                    <p>Access to multiplayer games</p>
-                  </div>
-                  <p class="price">$1/mo</p>
-                </div>
                 <div class="add">
                   <div class="checkbox-container">
                     <label>
@@ -166,10 +151,25 @@
                     </label>
                   </div>
                   <div class="description">
-                    <h3>Online Service</h3>
-                    <p>Access to multiplayer games</p>
+                    <h3>Larger Storage</h3>
+                    <p>Extra 1TB of cloud save</p>
                   </div>
-                  <p class="price">$1/mo</p>                </div>
+                  <p class="price">$2/mo</p>
+                </div>
+                <div class="add">
+                  <div class="checkbox-container">
+                    <label>
+                    <input type="checkbox"class="rounded-checkbox">
+                    <span class="checkmark">
+                      <svg class="checkbox-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="currentColor" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
+                    </span>
+                    </label>
+                  </div>
+                  <div class="description">
+                    <h3>Customizable Profile</h3>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                  <p class="price">$2/mo</p>                </div>
               </div>
             </div>
             <div class="form-step" data-step="4">
@@ -212,8 +212,9 @@
          
         </div>
           <div class="form-navigate">
-            <button>Go Back</button>
-            <button>Next Step</button>
+            <button class="prev">Go Back</button>
+            <button class="next">Next Step</button>
+            <button class="next">Confirm</button>
           </div>
       </div>
     </div>

@@ -118,6 +118,14 @@ form {
   letter-spacing: 0.1rem;
   font-size: 1rem;
 }
+.form-navigate button:nth-child(3) {
+  color: white;
+  background-color: var(--purplish-blue);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  display: none;
+}
 .form-step h2 {
   font-size: 2rem;
   color: var(--marine-blue);
@@ -182,9 +190,13 @@ form .input-group {
   border: 2px solid var(--light-gray);
   border-radius: 1rem;
   cursor: pointer;
+  transition: border 0.1s ease-in-out;
+}
+.plans .plan:hover {
+  border-color: var(--purplish-blue);
 }
 .plans .plan.selected {
-  background-color: aliceblue;
+  background-color: var(--magnolia);
   border-color: var(--purplish-blue);
 }
 .plan .description {
@@ -281,7 +293,9 @@ form .input-group {
 .checkbox-container input[type="checkbox"] {
   display: none;
 }
-
+.checkbox-container label {
+  pointer-events: none;
+}
 /* Custom checkbox (span) styling */
 .checkbox-container .checkmark {
   width: 30px;
@@ -314,7 +328,9 @@ form .input-group {
 .checkbox-container input[type="checkbox"]:checked + .checkmark .checkbox-icon {
   display: block;
 }
-.add.selected {
+.add.selected,
+.add:hover {
+  background-color: var(--magnolia);
   border-color: var(--purplish-blue);
 }
 .add {
@@ -328,6 +344,7 @@ form .input-group {
   border: 2px solid var(--light-gray);
   border-radius: 1rem;
   cursor: pointer;
+  transition: border 0.1s ease-in-out;
 }
 .add .description {
   flex-grow: 1;
@@ -418,4 +435,7 @@ form .input-group {
 .thank-you p {
   text-align: center;
   line-height: 2;
+}
+.hidden {
+  visibility: hidden;
 }
