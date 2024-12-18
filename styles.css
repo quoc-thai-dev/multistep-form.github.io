@@ -37,8 +37,18 @@ body {
   display: flex;
   gap: 2rem;
   list-style-type: none;
+  min-width: 300px;
 }
 .sidebar .control li {
+  display: flex;
+  color: var(--alabaster);
+}
+.sidebar .control li div {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+}
+.sidebar .control li span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,11 +60,12 @@ body {
   cursor: pointer;
   border: 2px solid var(--white);
 }
-.sidebar .control li:hover,
-.sidebar .control li.active {
+.sidebar .control li span:hover,
+.sidebar .control li.active span {
   background-color: var(--light-blue);
   color: var(--marine-blue);
   font-weight: bold;
+  border-color: var(--light-blue);
 }
 .form-content {
   position: absolute;
@@ -83,6 +94,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
 }
+
 .form-step {
   display: none;
 }
@@ -272,7 +284,7 @@ form .input-group {
   box-shadow: 0 0 1px var(--purplish-blue);
 }
 .switch input:checked ~ .yearly {
-  color: red;
+  color: var(--strawberry-red);
 }
 .switch input:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -412,14 +424,14 @@ form .input-group {
   color: var(--marine-blue);
   font-size: 1.25rem;
 }
-.total-serivce {
+.total-service {
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   color: var(--cool-gray);
 }
-.total-serivce span {
+.total-service span {
   font-size: 1.5rem;
   color: var(--purplish-blue);
   font-weight: 600;
@@ -444,4 +456,84 @@ form .input-group {
 }
 .d-none {
   display: none;
+}
+/* Desktop-specific styles */
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: var(--light-blue);
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+  }
+  .multi-step-form {
+    display: flex;
+    max-width: 70vw;
+    min-height: 75vh;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .sidebar {
+    border-radius: 1rem;
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  }
+  .form-content {
+    display: block;
+    position: unset;
+    transform: none;
+  }
+  #multiStepForm {
+    width: 100%;
+    min-height: 600px;
+    margin: 0;
+    box-shadow: none;
+  }
+  .form-navigate {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+  .right-content {
+    width: 750px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    position: relative;
+  }
+  .sidebar .control {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 1rem 2rem;
+  }
+  .sidebar .control li {
+    gap: 1rem;
+  }
+  .sidebar .control li div {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .sidebar .control li div p {
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  .sidebar .control li div h4 {
+    text-transform: uppercase;
+  }
+  .plans {
+    flex-direction: row;
+  }
+  .plans .plan {
+    flex-direction: column;
+  }
 }
